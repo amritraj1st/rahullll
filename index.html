@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who is Rahul??</title>
+    <style>
+        body {
+            size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+           padding-left: 0px;
+            margin: 0;
+            background-image: url('https://github.com/amritraj1st/Rahul_buddhau/blob/main/Untitled%20design_20240522_202653_0000.png?raw=true');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .question-container {
+            background-image: url('https://github.com/amritraj1st/Rahul_buddhau/blob/main/20240522_204046_0000.png?raw=true');
+
+            /* filter: blur(5px); */
+        }
+        .question-container {
+            /* Url of Rahul's image*/
+            padding: 60px;
+            border-radius: 25px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            opacity: 100%;
+            
+            
+            
+            
+        }
+           .buttons-container {
+            margin-top: 50px;
+        }
+            .button {
+            font-size: 25px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          .yes-button {
+            background-color: #4caf50;
+            color: white;
+        }
+          .no-button {
+            background-color: #f44336;
+            color: white;
+        }
+          .message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: Pink;
+        }
+        h2 {
+          text-align: center;
+         text-size-adjust: 50px;
+         color: #000208;
+      }
+    </style>
+</head>
+<body> 
+
+    
+    
+    <div class="question-container">
+        <h1> <b></b> Kya Hamara Mitra Rahul Buddhauu hai?</b></h1>
+        <div class="buttons-container">
+            <button class="button yes-button" onclick="showMessage('Der Samjhe Lekin Sahi Samjhe Rahul Budhau tha, hai aur rhega')">Yes</button>
+            <button class="button no-button" onclick="changeButtonPosition()">No</button>
+        </div>
+        <div class="message" id="loveMessage"></div>
+    </div>
+
+    <script>
+      function showimg(image) {
+        var img = document.createElement("img");
+        img.src = image;
+        img.style.width = "100%";
+        img.style.height = "100%";
+        img.style.position = "absolute";
+        img.style.top = "0";
+        img.style.left = "0";
+        img.style.zIndex = "1";
+        document.body.appendChild(img);        
+      }
+
+        function showMessage(message) {
+            document.getElementById('loveMessage').textContent = message;
+        }
+function changeButtonPosition() {
+            var buttons = document.querySelector('.buttons-container');
+            var noButton = document.querySelector('.no-button');
+            var newLeft = Math.floor(Math.random() * window.innerWidth);
+            var newTop = Math.floor(Math.random() * window.innerHeight);
+            noButton.style.position = 'absolute';
+            noButton.style.left = newLeft + 'px';
+            noButton.style.top = newTop + 'px';
+        }
+    </script>
+<body bgcolor = "grey"></body>
+</html>
